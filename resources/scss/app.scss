@@ -1,0 +1,236 @@
+@use 'resources/scss/_variables.scss' as *;
+@use 'resources/scss/_mixins.scss' as *;
+@import "@fortawesome/fontawesome-free/css/all.css";
+@import '~bootstrap/scss/bootstrap';
+
+//HEADER
+
+    .border-gray{
+        border-color: rgb(168, 168, 168);
+    }
+
+    .sky-blue {
+        color: $sky-blue;
+    }
+
+    .bg-green {
+        background-color: rgb(67, 181, 67);
+    }
+
+    .w-55 {
+        width: 55%;
+    }
+
+    .blue-bar {
+        height: 80px;
+        background-color: $sky-blue;
+    }
+
+    .detail-img {
+        width: 185px;
+        position: absolute;
+        top: 300px;
+    }
+
+    img {
+        width: 80px;
+    }
+
+    .thumb-img {
+        width: 100%;
+    }
+
+    .navbar {
+        height: 124px;
+        padding: 0;
+
+        nav {
+        @include flex-center;
+        height: $h-100;
+
+            ul {
+                list-style: none;
+                display: flex;
+                height: $h-100;
+                margin: 0;
+
+                li {
+                    @include flex-center;
+                    padding: 10px 15px;
+                    height: $h-100;
+                    border-bottom: 3px solid transparent;
+
+                    &:hover{
+                        border-bottom: $boreder-blue;
+                    }
+
+                    a:hover{
+                        color: $sky-blue; 
+                    }
+
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+        } 
+    }
+
+    input {
+        outline: 0;
+        border-width: 0 0 2px;
+        border-color: rgb(2, 130, 249)
+      }
+
+    .search_icon {
+        position: absolute;
+        right: 25px;
+        top: 55px;
+    }
+
+    .header_a {
+        color: black;
+        font-weight: 500;
+    }
+
+//MAIN
+
+    .jumbotron {
+        height: 400px;
+        background-image: url(../img/jumbotron.jpg);
+    }
+
+    .comics {
+        background-color: #232323;
+
+        .title {
+            position: relative;
+
+            h2 {
+                background-color: $sky-blue;
+                width: 290px;
+                padding: 15px;
+                text-align: center;
+                color: white;
+                position: absolute;
+                top: -35px;
+            }
+        }
+
+        .content {
+            @include flex-center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding-top: 4rem;
+
+            .comic {
+                max-width: 193px;
+                min-height: 387px;
+            }
+    
+            .series {
+                text-transform: uppercase;
+                color: white;
+                margin: 1rem 0 2rem 0;
+            }
+
+            .load-btn {
+                width: 100%;
+                margin: 2rem;
+                @include flex-center;
+                justify-content: space-around;
+            }
+
+            button {
+                padding: 5px 50px;
+                background-color: $sky-blue;
+                border-color: $sky-blue;
+                color: white;
+            }
+        }
+    }
+
+//FOOTER 
+
+    .footer_a {
+        text-decoration: none;
+        color: #8b8b8b;
+    }
+
+    .top-footer {
+        background-color: $sky-blue;
+    
+        img {
+        width: 50px;
+        max-height: 65px;
+        }
+    
+        ul {
+        display: flex;
+        align-items: center;
+        padding: 3rem;
+        justify-content: space-between;
+        }
+    }
+    
+    span {
+        color: #fff;
+        padding: 1rem;
+    }
+    
+    .column {
+        width: fit-content;
+    }
+    
+    .middle-footer {
+        background-image: url(../img/footer-bg.jpg);
+        .row {
+            padding: 2rem 0 2rem 0;
+        }
+    
+        ul {
+            margin: 0 1rem 1rem 0;
+            list-style-type: none;
+            padding: 0;
+        }
+    
+        h5, li{
+            color:#fff;
+        }
+    
+        .container-xl{
+            background-image: url(../img/dc-logo-bg.png);
+            background-repeat: no-repeat;
+            background-position: right center;
+        }
+    }
+    
+    .bottom-footer {
+        background-color: #2a2a2a;
+    
+        .row {
+            padding: 2rem 0;
+        }
+    
+        button {
+            border-color: $sky-blue;
+            background-color: #2a2a2a;
+            color: #fff;
+            padding: 0.5rem 1rem;
+        }
+    
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    
+        li {
+            margin: 0 1rem;
+    
+            & strong {
+                color: $sky-blue;
+                font-size: 25px;
+            }  
+        }
+    }
