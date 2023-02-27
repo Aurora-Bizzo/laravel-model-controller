@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\comics;
+use App\Models\Comic;
 
 class DetailsController extends Controller
 {
     public function index(){
 
-        $comics = comics::all();
+        $comics = Comic::all();
     
         $menu = [
             'CHARACTERS' => '/characters',
